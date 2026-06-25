@@ -17,7 +17,7 @@ export const Servers = () => {
             </header>
             <div className="w-full mb-16">
                 <img 
-                    src="src/assets/WhatsApp Image 2026-05-19 at 20.00.03.jpeg" /* Replace with your actual image path */
+                    src="../assets/WhatsApp Image 2026-05-19 at 20.00.03.jpeg" /* Replace with your actual image path */
                     alt="Our Altar Servers" 
                     className="w-full object-cover"
                 />

@@ -31,7 +31,7 @@ export const Navbar = () => {
             <nav className="container mx-auto px-6 flex items-center justify-between">
                 <Link to="/" className="flex items-center gap-2 focus:outline-none">
                     <img 
-                        src="src/assets/channels4_profile-Photoroom.png" // Path to your logo in the public folder (or imported)
+                        src="../assets/channels4_profile-Photoroom.png" // Path to your logo in the public folder (or imported)
                         alt="St. Mary's Syro-Malabar Altar Servers Logo" 
                         className={`object-contain transition-all duration-500 ${
                             isScrolled ? "h-8" : "h-12"
