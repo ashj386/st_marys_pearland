@@ -79,16 +79,7 @@ export const Navbar = () => {
                                 {link.label}
                             </Link>
                         ))}
-
-                        {/* Button Component - Closes menu and navigates to the contact page */}
-                        <Button 
-                            onClick={() => {
-                                closeMobileMenu();
-                                navigate("/contact");
-                            }}
-                        >
-                            Contact Us
-                        </Button>
+                        
                     </div>
                 </div>
             )}
