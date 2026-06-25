@@ -59,10 +59,10 @@ export const About = () => {
                     </div>
                     <div className="flex-1 grid grid-cols-2 gap-4 w-full">
                         <div className="aspect-square rounded-2xl bg-surface/50 overflow-hidden border border-border/50">
-                             <img src="src/assets/photos/PHOTO-2024-11-30-18-19-41.jpg" alt="Serving" className="w-full h-full object-cover opacity-80" />
+                             <img src="/PHOTO-2024-11-30-18-19-41.jpg" alt="Serving" className="w-full h-full object-cover opacity-80" />
                         </div>
                         <div className="aspect-square rounded-2xl bg-surface/50 mt-8 overflow-hidden border border-border/50">
-                             <img src="src/assets/photos/PHOTO-2024-11-30-14-49-27 6.jpg" alt="Community" className="w-full h-full object-cover opacity-80" />
+                             <img src="/PHOTO-2024-11-30-14-49-27 6.jpg" alt="Community" className="w-full h-full object-cover opacity-80" />
                         </div>
                     </div>
                 </div>
