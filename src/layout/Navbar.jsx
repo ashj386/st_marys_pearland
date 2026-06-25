@@ -2,7 +2,7 @@ import { Button } from "@/components/Button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Added useNavigate for the button
 
 const navLinks = [
     {href: "/about", label: "About"},
@@ -11,9 +11,11 @@ const navLinks = [
     {href: "/gallery", label: "Gallery"},
     {href: "/contact", label: "Contact"},
 ]
+
 export const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const navigate = useNavigate(); // Hook to change pages programmatically
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,12 +28,19 @@ export const Navbar = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    // Simple helper to cleanly close the menu
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+    };
+
     return (
         <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "bg-background/90 py-3" : "bg-background/90 py-5"} z-50`}>
             <nav className="container mx-auto px-6 flex items-center justify-between">
-                <Link to="/" className="flex items-center gap-2 focus:outline-none">
+                {/* Logo Link - Added closeMobileMenu in case they open the menu and tap home */}
+                <Link to="/" onClick={closeMobileMenu} className="flex items-center gap-2 focus:outline-none">
                     <img 
-                        src="/channels4_profile-Photoroom.png" // Path to your logo in the public folder (or imported)
+                        src="/channels4_profile-Photoroom.png" 
                         alt="St. Mary's Syro-Malabar Altar Servers Logo" 
                         className={`object-contain transition-all duration-500 ${
                             isScrolled ? "h-8" : "h-12"
@@ -50,8 +59,6 @@ export const Navbar = () => {
                     </div>
                 </div>
 
-
-
                 {/* mobile menu button */}
                 <button className="md:hidden p-2 text-foreground cursor-pointer" onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -63,15 +70,25 @@ export const Navbar = () => {
                 <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md animate-fade-in border-t border-border/10">
                     <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                         {navLinks.map((link, index) => (
-                                <Link 
+                            <Link 
                                 to={link.href} 
                                 key={index} 
-                                className="text-lg text-muted-foreground hover:text-foreground py-2">
-                                    {link.label}
-                                </Link>
-                            ))}
+                                onClick={closeMobileMenu} // <-- FIX: Closes menu when regular link is clicked
+                                className="text-lg text-muted-foreground hover:text-foreground py-2"
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
 
-                        <Button>Contact Us</Button>
+                        {/* Button Component - Closes menu and navigates to the contact page */}
+                        <Button 
+                            onClick={() => {
+                                closeMobileMenu();
+                                navigate("/contact");
+                            }}
+                        >
+                            Contact Us
+                        </Button>
                     </div>
                 </div>
             )}
