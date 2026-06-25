@@ -19,7 +19,7 @@ export const About = () => {
                   - This forces the browser to show 100% of the image without ever clipping the sides or heads.
                 */}
                 <img 
-                    src="../assets/photos/PHOTO-2025-05-11-21-48-50.jpg" 
+                    src="/PHOTO-2025-05-11-21-48-50.jpg" 
                     alt="Our Ministry Group" 
                     className="absolute inset-0 w-full h-full object-contain object-center z-0"
                 />

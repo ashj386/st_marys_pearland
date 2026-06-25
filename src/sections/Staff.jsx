@@ -6,13 +6,13 @@ const staffData = {
         {
             name: "Rev. Sr. Agnes Maria, MSMI",
             role: "Liturgical Coordinator",
-            image: "../assets/Screenshot 2026-06-21 at 7.40.12 PM.png", // Replace with actual path
+            image: "/Screenshot 2026-06-21 at 7.40.12 PM.png", // Replace with actual path
             bio: "Providing spiritual guidance and oversight to liturgical services."
         },
         {
             name: "Rev. Fr. Varghese (Daey) George Kunnath, MST",
             role: "Vicar",
-            image: "../assets/fr-daey.jpg", // Replace with actual path
+            image: "/fr-daey.jpg", // Replace with actual path
             bio: "Providing spiritual guidance and oversight to all church activities."
         }
     ],
@@ -20,13 +20,13 @@ const staffData = {
         {
             name: "Tom Jacob",
             role: "President",
-            image: "../assets/Screenshot 2026-06-21 at 7.29.49 PM.png",
+            image: "/Screenshot 2026-06-21 at 7.29.49 PM.png",
             bio: "Leading the ministry and coordinating with church leadership."
         },
         {
             name: "Jyothis Sajan",
             role: "Vice President",
-            image: "../assets/Screenshot 2026-06-21 at 7.29.21 PM.png",
+            image: "/Screenshot 2026-06-21 at 7.29.21 PM.png",
             bio: "Managing communications and server schedules."
         },
     ]
