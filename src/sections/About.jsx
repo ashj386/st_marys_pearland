@@ -45,7 +45,7 @@ export const About = () => {
                     <div className="flex-1">
                         <h2 className="text-3xl font-bold mb-6 text-foreground">Our Mission</h2>
                         <p className="text-muted-foreground text-lg mb-6">
-                            We are a young, growing, and dedicated group of over 50 altar servers who serve at 
+                            We are a young, growing, and dedicated group of 54 altar servers who serve at 
                             St. Mary's Syro-Malabar Catholic Church in Pearland, Texas.
                         </p>
                         <p className="text-muted-foreground text-lg mb-8">

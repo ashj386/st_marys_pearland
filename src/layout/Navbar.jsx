@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom"; // Added useNavigate for t
 const navLinks = [
     {href: "/about", label: "About"},
     {href: "/servers", label: "Servers"},
-    {href: "/staff", label: "Staff"},
+    {href: "/staff", label: "Committee"},
     {href: "/gallery", label: "Gallery"},
     {href: "/contact", label: "Contact"},
 ]
@@ -79,7 +79,7 @@ export const Navbar = () => {
                                 {link.label}
                             </Link>
                         ))}
-                        
+
                     </div>
                 </div>
             )}

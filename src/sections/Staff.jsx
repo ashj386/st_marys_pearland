@@ -4,30 +4,28 @@ import { Mail, LucideUserStar, LucideChurch } from "lucide-react";
 const staffData = {
     spiritual: [
         {
-            name: "Rev. Sr. Agnes Maria, MSMI",
-            role: "Liturgical Coordinator",
-            image: "/Screenshot 2026-06-21 at 7.40.12 PM.png", // Replace with actual path
-            bio: "Providing spiritual guidance and oversight to liturgical services."
-        },
-        {
             name: "Rev. Fr. Varghese (Daey) George Kunnath, MST",
-            role: "Vicar",
+            role: "Director",
             image: "/fr-daey.jpg", // Replace with actual path
             bio: "Providing spiritual guidance and oversight to all church activities."
+        },
+        {
+            name: "Rev. Sr. Agnes Maria, MSMI",
+            role: "Trainer and Scheduler, 2016-2026",
+            image: "/WhatsApp Image 2026-06-24 at 22.41.38.jpeg", // Replace with actual path
+            bio: "Providing spiritual guidance and oversight to liturgical services."
         }
     ],
     executive: [
         {
             name: "Tom Jacob",
-            role: "President",
+            role: "Leader",
             image: "/Screenshot 2026-06-21 at 7.29.49 PM.png",
-            bio: "Leading the ministry and coordinating with church leadership."
         },
         {
             name: "Jyothis Sajan",
-            role: "Vice President",
+            role: "Co-leader",
             image: "/Screenshot 2026-06-21 at 7.29.21 PM.png",
-            bio: "Managing communications and server schedules."
         },
     ]
 };
@@ -72,7 +70,7 @@ export const Staff = () => {
             <section className="container mx-auto px-6">
                 <div className="flex items-center gap-3 mb-8">
                     <LucideUserStar className="text-primary" size={28} />
-                    <h2 className="text-3xl font-bold">Executive Board</h2>
+                    <h2 className="text-3xl font-bold">Altar Server Leaders</h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
                     {staffData.executive.map((member, index) => (
@@ -83,7 +81,6 @@ export const Staff = () => {
                             <div>
                                 <h3 className="text-xl font-bold text-white">{member.name}</h3>
                                 <p className="text-primary font-medium mb-3">{member.role}</p>
-                                <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
                             </div>
                         </div>
                     ))}
